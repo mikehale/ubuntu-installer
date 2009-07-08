@@ -36,10 +36,10 @@ end
 task :isolinux => 'image' do
   mkdir 'image/isolinux'
 
-  cp '/Volumes/Ubuntu-Server 9./isolinux/boot.cat', 'image/isolinux'
+  cp '/cdrom/isolinux/boot.cat', 'image/isolinux'
   sh 'chmod u+w image/isolinux/boot.cat'
 
-  cp '/Volumes/Ubuntu-Server 9./isolinux/isolinux.bin', 'image/isolinux'
+  cp '/cdrom/isolinux/isolinux.bin', 'image/isolinux'
   sh 'chmod u+w image/isolinux/isolinux.bin'
 
   cp 'config/isolinux.cfg', 'image/isolinux'
@@ -47,8 +47,8 @@ end
 
 task :installer => 'image' do
   mkdir 'image/install'
-  cp '/Volumes/Ubuntu-Server 9./install/initrd.gz', 'image/install'
-  cp '/Volumes/Ubuntu-Server 9./install/vmlinuz', 'image/install'
+  cp '/cdrom/install/initrd.gz', 'image/install'
+  cp '/cdrom/install/vmlinuz', 'image/install'
 end
 
 task :preseed => 'image' do
