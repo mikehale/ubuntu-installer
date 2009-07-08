@@ -1,9 +1,9 @@
 Name: intrepid
-Method: http://tz.archive.ubuntu.com/ubuntu
+Method: http://us.archive.ubuntu.com/ubuntu
 FilterList: purge selections
 
 Name: intrepid-updates
-Method: http://tz.archive.ubuntu.com/ubuntu
+Method: http://us.archive.ubuntu.com/ubuntu
 FilterList: purge selections
 
 Name: intrepid-security

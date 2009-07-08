@@ -10,11 +10,11 @@ d-i netcfg/dhcp_failed note
 d-i netcfg/dhcp_options select Configure network manually
 
 ### Mirror settings
-d-i mirror/country string TZ
+d-i mirror/country string US
 
 ### Clock and time zone setup
 d-i clock-setup/utc boolean true
-d-i time/zone string Africa/Dar_es_Salaam
+d-i time/zone string UTC
 d-i clock-setup/ntp boolean false
 
 ### Partitioning
