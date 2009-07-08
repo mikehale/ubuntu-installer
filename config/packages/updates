@@ -1,11 +1,11 @@
-Name: intrepid
-Method: http://tz.archive.ubuntu.com/ubuntu
+Name: jaunty
+Method: http://us.archive.ubuntu.com/ubuntu
 FilterList: purge selections
 
-Name: intrepid-updates
-Method: http://tz.archive.ubuntu.com/ubuntu
+Name: jaunty-updates
+Method: http://us.archive.ubuntu.com/ubuntu
 FilterList: purge selections
 
-Name: intrepid-security
+Name: jaunty-security
 Method: http://security.ubuntu.com/ubuntu
 FilterList: purge selections

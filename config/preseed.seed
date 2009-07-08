@@ -10,7 +10,7 @@ d-i netcfg/dhcp_failed note
 d-i netcfg/dhcp_options select Configure network manually
 
 ### Mirror settings
-d-i mirror/country string TZ
+d-i mirror/country string US
 
 ### Clock and time zone setup
 d-i clock-setup/utc boolean true
@@ -34,9 +34,9 @@ d-i passwd/make-user boolean false
 ### Apt setup
 d-i apt-setup/use_mirror boolean false
 d-i apt-setup/services-select multiselect
-d-i apt-setup/local0/repository string file:/opt/local/var/lib/apt/packages intrepid main universe
+d-i apt-setup/local0/repository string file:/opt/local/var/lib/apt/packages jaunty main universe
 d-i apt-setup/local0/source boolean false
-d-i apt-setup/local1/repository string file:/opt/local/var/lib/apt/packages intrepid-updates main universe
+d-i apt-setup/local1/repository string file:/opt/local/var/lib/apt/packages jaunty-updates main universe
 d-i apt-setup/local1/source boolean false
 d-i debian-installer/allow_unauthenticated string true
 

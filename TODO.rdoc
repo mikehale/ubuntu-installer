@@ -1,5 +1,5 @@
 == Soon
-include intrepid-updates and intrepid-security
+include jaunty-updates and jaunty-security
 * uncomment lines in config/packages/distributions
 * run `rake packages:update`
 

@@ -29,17 +29,17 @@ directory 'image'
 
 task :clean do
   rm_rf 'image'
-  rm_rf 'ubuntu-8.10-server-i386-custom.iso'
+  rm_rf 'ubuntu-9.04-server-i386-custom.iso'
   # don't remove work: it's really expensive to recreate with crappy bandwidth.
 end
 
 task :isolinux => 'image' do
   mkdir 'image/isolinux'
 
-  cp '/cdrom/isolinux/boot.cat', 'image/isolinux'
+  cp '/Volumes/Ubuntu-Server 9./isolinux/boot.cat', 'image/isolinux'
   sh 'chmod u+w image/isolinux/boot.cat'
 
-  cp '/cdrom/isolinux/isolinux.bin', 'image/isolinux'
+  cp '/Volumes/Ubuntu-Server 9./isolinux/isolinux.bin', 'image/isolinux'
   sh 'chmod u+w image/isolinux/isolinux.bin'
 
   cp 'config/isolinux.cfg', 'image/isolinux'
@@ -47,8 +47,8 @@ end
 
 task :installer => 'image' do
   mkdir 'image/install'
-  cp '/cdrom/install/initrd.gz', 'image/install'
-  cp '/cdrom/install/vmlinuz', 'image/install'
+  cp '/Volumes/Ubuntu-Server 9./install/initrd.gz', 'image/install'
+  cp '/Volumes/Ubuntu-Server 9./install/vmlinuz', 'image/install'
 end
 
 task :preseed => 'image' do
@@ -77,7 +77,7 @@ task :disk => 'image' do
     write 'base_components', 'main'
     write 'base_installable'
     write 'cd_type',         'full_cd/single'
-    write 'info',            'Ubuntu 8.10 Server (Custom)'
+    write 'info',            'Ubuntu 9.04 Server (Custom)'
     write 'udeb_include',    'netcfg', 'ethdetect', 'pcmcia-cs-udeb', 'wireless-tools-udeb'
   end
 end
@@ -93,9 +93,9 @@ task :iso => [:isolinux, :installer, :preseed, :packages, :ubuntu, :disk] do
       -full-iso9660-filenames \
       -joliet \
       -no-emul-boot \
-      -output ubuntu-8.10-server-i386-custom.iso \
+      -output ubuntu-9.04-server-i386-custom.iso \
       -rational-rock \
-      -volid "Ubuntu 8.10 Server (Custom)" \
+      -volid "Ubuntu 9.04 Server (Custom)" \
       image
   END
 end

@@ -1,17 +1,17 @@
-Codename: intrepid
+Codename: jaunty
 Suite: stable
 Architectures: i386
 Components: main universe
 UDebComponents: main
-Update: intrepid
+Update: jaunty
 
-Codename: intrepid-updates
+Codename: jaunty-updates
 Architectures: i386
 Components: main universe
-Update: intrepid-updates
+Update: jaunty-updates
 
-# Codename: intrepid-security
+# Codename: jaunty-security
 # Architectures: i386
 # Components: main universe
-# Update: intrepid-security
+# Update: jaunty-security
 
